@@ -1,9 +1,12 @@
 import CarWidget from "./CarWidget"
 function NavBar(){
     return(
-        <div>
+        <div className="barra">
         <CarWidget/>
-        <h1>NavBar</h1>
+        <a href="comedor" className="comedor">comedor</a> 
+        <a href="cocina" className="cocina">cocina</a> 
+        <a href="baño" className="baño">baño</a> 
+        
         </div>
     )
 }

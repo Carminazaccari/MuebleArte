@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.barra{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.productos{
+display: flex;
+flex-direction: row;
+gap: 40px; 
+}

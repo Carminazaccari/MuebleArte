@@ -4,7 +4,7 @@ function Header(){
     return(
         <div>
         <NavBar/>
-        <h1>Header</h1>
+        <h1>MuebleArte</h1>
         </div>
     )
 }

@@ -6,7 +6,6 @@ import{BrowserRouter, Routes, Route} from "react-router-dom";
 import Layout from './components/Layout';
 import Error from './components/Error';
 import Home from './components/Home';
-import Productos from './components/Productos';
 import Detalle from './components/Detalle';
 import ItemListContainer from './components/ItemListContainer';
 
@@ -28,11 +27,7 @@ function App() {
         <Route path="/*" element={<Error/>} />
         </Route> 
     </Routes>
-      {/*<div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>*/}
+      
       </BrowserRouter>
       
     </>

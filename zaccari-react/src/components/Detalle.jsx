@@ -6,11 +6,12 @@ const {id} = useParams();
 
 const producto = productosMuebleria.find(prod =>prod.id===parseInt(id));
 
+
 if(!producto){
     return <h2>El producto no existe</h2>;
 }
 return(
-        <div> 
+        <div className="detalle-card"> 
             <h2>Detalle del producto</h2>
             <h4>{producto.nombre}</h4>
             <p>{producto.descripcion}</p>

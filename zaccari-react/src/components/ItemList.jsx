@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Item from "./Item";
+import Producto from "./Producto";
 
 
 function ItemList({ items }) {
@@ -25,8 +25,9 @@ function ItemList({ items }) {
       <div className="itemList-container">
 
       {filteredItems.map(item => (
-        <Item
+        <Producto
         key={item.id}
+        id={item.id}
         nombre={item.nombre}
         precio={item.precio}
         descripcion={item.descripcion}

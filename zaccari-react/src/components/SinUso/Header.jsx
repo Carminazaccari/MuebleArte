@@ -1,9 +1,9 @@
-
+import NavBar from "../Navbar"
 
 function Header() {
     return (
-        <div>
 
+        <div>
             <h1>MuebleArte</h1>
         </div>
     )

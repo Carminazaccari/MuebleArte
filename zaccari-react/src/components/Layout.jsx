@@ -1,25 +1,16 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom";
+import NavBar from "./Navbar";
 
 
-function Layout(){
-    return(
-        <> 
-        <nav className="conteiner-nav">
-            <ul className="links-nav">
-                <li className="links-nav">
-                    <Link to={"/"}>Home</Link>
-                </li>
-                <li className="links-nav">
-                    <Link to={"/productos"}>Productos</Link>
-                </li>
-            </ul>
-            
-        </nav>
-        
-        
-        <Outlet/>
-       
-            </>
+
+function Layout() {
+    return (
+        <>
+             <NavBar/>
+            <main>
+            <Outlet />
+            </main>
+        </>
     )
 }
 

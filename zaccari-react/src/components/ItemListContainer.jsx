@@ -1,31 +1,27 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import  productosMuebleria  from "../productos";
 import "./List.css";
 
-import React from 'react'
-
 function ItemListContainer() {
+  const [items, setItems] = useState([]);
 
-    const [items,setItems] = useState([]);
-
-    useEffect(() => {
-        const fetchProductos = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(productosMuebleria)
-            },1000)
-          })
-    
-          fetchProductos.then((data) => {
-            setItems(data)
-          })
-    },[])
+  useEffect(() => {
+  fetch("/productos.json")
+    .then((res) => {
+      if (!res.ok) {
+      throw new Error("No se pudo cargar el archivo JSON");
+        }
+        return res.json();
+      })
+    .then((data) => setItems(data))
+    .catch((err) => console.error("Error cargando productos:", err));
+  }, []);
 
   return (
     <div className="itemList-container">
-        <ItemList items={items}/>
+      <ItemList items={items} />
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

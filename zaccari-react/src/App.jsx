@@ -8,6 +8,8 @@ import Error from './components/Error';
 import Home from './components/Home';
 import Detalle from './components/Detalle';
 import ItemListContainer from './components/ItemListContainer';
+import Carrito from './components/Carrito';
+
 
 
 
@@ -25,6 +27,7 @@ function App() {
         <Route index element={<Home/>} />
         <Route path="/productos" element={<ItemListContainer/>} />
         <Route path="/productos/:id" element={<Detalle/>} />
+        <Route path="/carrito" element={<Carrito/>} />
         <Route path="/*" element={<Error/>} />
         </Route> 
     </Routes>

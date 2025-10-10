@@ -8,11 +8,13 @@ export const CarritoProvider = ({ children }) => {
   const addToCarrito = (producto) => {
     const existing = carrito.find(item => item.id === producto.id);
     if (existing) {
-      setCarrito(carrito.map(item =>
-        item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
+  setCarrito(carrito.map(item =>
+    item.id === producto.id
+    ? { ...item, cantidad: item.cantidad + producto.cantidad }
+    : item
       ));
-    } else {
-      setCarrito([...carrito, { ...producto, cantidad: 1 }]);
+  } else {
+    setCarrito([...carrito, { ...producto }]); 
     }
   };
 
@@ -23,12 +25,21 @@ export const CarritoProvider = ({ children }) => {
   const clearCarrito = () => setCarrito([]);
 
   const ItemsTotal = carrito.reduce((acumulado, item) => acumulado + item.cantidad, 0);
-  const PrecioTotal = carrito.reduce((acumulado, item) => acumulado + item.precio * item.cantidad, 0);
+  const PrecioTotal = carrito.reduce((acumulado, item) => acumulado + item.price * item.cantidad, 0);
 
   return (
-    <CarritoContext.Provider value={{ carrito, addToCarrito, removeFromCarrito, clearCarrito, ItemsTotal, PrecioTotal }}>
-      {children}
-    </CarritoContext.Provider>
+  <CarritoContext.Provider
+   value={{
+    carrito,
+    addToCarrito,
+    removeFromCarrito,
+    clearCarrito,
+    ItemsTotal,
+    PrecioTotal
+      }}
+    >
+  {children}
+  </CarritoContext.Provider>
   );
 };
 

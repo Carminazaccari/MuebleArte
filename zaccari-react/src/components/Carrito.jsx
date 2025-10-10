@@ -11,9 +11,9 @@ return (
         <div>
           {carrito.map(item => (
             <div key={item.id}>
-              <h3>{item.nombre}</h3>
+              <h3>{item.title}</h3>
               <p>Cantidad: {item.cantidad}</p>
-              <p>Precio total: ${item.precio * item.cantidad}</p>
+              <p>Precio total: ${item.price * item.cantidad}</p>
               <button onClick={() => removeFromCarrito(item.id)}>Eliminar</button>
             </div>
           ))}

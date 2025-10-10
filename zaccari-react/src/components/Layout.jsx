@@ -6,10 +6,12 @@ import NavBar from "./Navbar";
 function Layout() {
     return (
         <>
+        <div className="fondogeneral">
              <NavBar/>
             <main>
             <Outlet />
             </main>
+            </div>
         </>
     )
 }

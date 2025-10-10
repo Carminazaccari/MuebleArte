@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Producto from "./Producto";
+import Producto from "../Producto";
 
 
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const filteredItems = selectedCategory
-    ? items.filter(item => item.categoria === selectedCategory)
+    ? items.filter(item => item.categoryId === selectedCategory)
     : items;
 
   return (
@@ -24,15 +24,15 @@ function ItemList({ items }) {
       </div>
       <div className="itemList-container">
 
-      {filteredItems.map(item => (
-        <Producto
-        key={item.id}
-        id={item.id}
-        nombre={item.nombre}
-        precio={item.precio}
-        descripcion={item.descripcion}
-        />
-      ))}
+        {filteredItems.map(item => (
+          <Producto
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            description={item.description}
+          />
+        ))}
       </div>
     </div>
   );

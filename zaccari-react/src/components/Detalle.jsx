@@ -6,8 +6,11 @@ import { useCarrito } from "./context/CarritoContext";
 import ItemCount from "./items/ItemCount";
 
 
+
 function Detalle() {
   const { id } = useParams(); 
+  const { addToCarrito } = useCarrito();
+
   const [producto, setProducto] = useState(null);
   const [cargando, setCargando] = useState(true);
 
@@ -47,8 +50,6 @@ function Detalle() {
 
   if (!producto) return <h2>El producto no existe</h2>;
 
-  const { addToCarrito } = useCarrito();
-
   const handleAdd = (cantidad) => {
     const productoParaCarrito = {
       id: producto.id,
@@ -61,12 +62,14 @@ function Detalle() {
   };
 
   return (
+    <div className="detalle-conteiner">
     <div className="detalle-card">
       <h2>Detalle del producto</h2>
       <h4>{producto.title}</h4>
       <p>{producto.description}</p>
       <h6>${producto.price}</h6>
       <ItemCount stock={producto.stock} onAdd={handleAdd} />
+    </div>
     </div>
   );
 }

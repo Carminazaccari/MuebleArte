@@ -7,36 +7,102 @@
     margin-top: 20px;
 }
 
-.producto-tarjeta{
+.producto-tarjeta {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 250px;
     width: 150px;
     padding: 25px;
-    background-color: transparent;
-    color: rgb(30, 30, 30);
+    background-color: #f4f4f9;
+    color: #333;
     border-radius: 15px;
-    border: 4px solid rgb(104, 95, 96);
+    border: 3px solid #8e44ad;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.button-category{
- display: flex;
- justify-content: space-between; 
- align-items: center;
+.producto-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(142, 68, 173, 0.3);
 }
 
-.detalle-card{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 450px;
-width: 450px;
-padding: 25px;
-background-color: transparent;
-color: rgb(30, 30, 30);
-border-radius: 15px;
-border: 4px solid rgb(104, 95, 96);   
+.button-category {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button-category button {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.button-category button:hover {
+    background-color: #a29bfe;
+}
+
+.detalle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.detalle-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 450px;
+    width: 450px;
+    padding: 25px;
+    background-color: #f4f4f9;
+    color: #333;
+    border-radius: 15px;
+    border: 3px solid #8e44ad;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.item-count button {
+    background-color: #6c5ce7;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item-count button:hover {
+    background-color: #a29bfe;
+}
+
+.item-count button:disabled {
+    background-color: #dcdde1;
+    cursor: not-allowed;
+}
+
+.item-count span {
+    font-size: 1.2rem;
+    font-weight: bold;
 }

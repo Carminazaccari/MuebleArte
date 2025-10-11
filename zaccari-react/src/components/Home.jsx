@@ -2,7 +2,7 @@ function Home(){
     return(
         <div className="conteiner-principal">
         <h1>Bienvenidos a la muebleria de tus sueños</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure blanditiis esse doloribus. Ullam, voluptates sit consectetur voluptatem delectus sed ea molestiae soluta voluptate molestias error nulla esse deleniti cum explicabo. </p>
+        <p>Mas de 10 años ayudando a familias a construir el sueño de una casa con muebles de primera calidad</p>
         
             <img src="/public/img/muebleria1.jpeg" alt="muebleria1" />
        

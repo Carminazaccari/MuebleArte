@@ -141,3 +141,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+img{
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.conteiner-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  min-height: 100vh;       
+  padding: 20px;
+}
